@@ -2,6 +2,7 @@ appnope==0.1.0
 astunparse==1.6.3
 attrs==19.3.0
 Automat==20.2.0
+Brotli==1.0.9
 certifi==2020.12.5
 click==7.1.2
 dash==1.18.1
