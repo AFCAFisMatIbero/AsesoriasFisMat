@@ -8,7 +8,7 @@ click==7.1.2
 dash==1.18.1
 dash-core-components==1.14.1
 dash-html-components==1.1.1
-dash-renderer=01.8.3
+dash-renderer==01.8.3
 dash-table==4.11.1
 et-xmlfile==1.0.1
 Flask==1.1.2
