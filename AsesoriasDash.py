@@ -23,19 +23,19 @@ app.layout = html.Div([
             html.Img(src='assets/logoFISMAT.JPg',
                      style={'width': 500, 'height': 100})
         ],
-        className='six-columns'),
+            className='six-columns'),
         html.Div([
             html.H2('Consulta de horarios para asesoría',
-                    style={'color':'#dc4b4a'})
-            ],
-        className='six-columns')
+                    style={'color': '#dc4b4a'})
+        ],
+            className='six-columns')
     ], className='row'),
 
     html.Div([
         html.H5('Selecciona tu materia'),
         dcc.Dropdown(
             id='selector_materia',
-            options = [
+            options=[
                 {'label': materia, 'value': materia}
                 for materia in materias_full
             ]
@@ -50,11 +50,11 @@ app.layout = html.Div([
                 'color': 'white'
             },
             style_cell_conditional=[
-                    {
-                        'if': {'column_id': 'id/correo'},
-                        'textAlign': 'left'
-                    }
-                ],
+                {
+                    'if': {'column_id': 'id/correo'},
+                    'textAlign': 'left'
+                }
+            ],
             sort_action='native',
             sort_mode='multi',
             columns=[{'name': col, 'id': col} for col in data.iloc[:, 2:].columns],
@@ -63,12 +63,12 @@ app.layout = html.Div([
     ])
 ])
 
+
 @app.callback(
     Output('tabla_asesores', 'columns'),
     Output('tabla_asesores', 'data'),
     Input('selector_materia', 'value')
 )
-
 def update_table(selector_materia):
     if selector_materia is None:
         filtered_data = data.iloc[:, 2:]
